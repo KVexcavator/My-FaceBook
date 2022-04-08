@@ -1,4 +1,5 @@
 import React, {useState} from "react"
+import { Helmet } from 'react-helmet'
 import "../../assets/css/style.css"
 function importAll(r) {
   let images = {};
@@ -46,6 +47,10 @@ const App = () => {
 
   return(
     <div className="container">
+      <Helmet>
+        <title>BackBook - Feed</title>
+        <meta name="description" content="Newsfeed of all your friends on BackBook" />
+      </Helmet>
       <div className="postForm">
         <form onSubmit={handleSubmit}>
           <textarea
